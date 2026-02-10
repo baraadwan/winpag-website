@@ -29,6 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakartaSans.variable} ${geistMono.variable}`}>
       <head>
+        <link rel="preconnect" href="https://d3niuqph2rteir.cloudfront.net" />
+        <link rel="dns-prefetch" href="https://d3niuqph2rteir.cloudfront.net" />
+        <Script
+          id="page-hide"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(){var e="body {opacity: 0 !important;}",t=document.createElement("style");t.type="text/css",t.id="page-hide-style",t.styleSheet?t.styleSheet.cssText=e:t.appendChild(document.createTextNode(e)),document.head.appendChild(t),window.rmo=function(){var e=document.getElementById("page-hide-style");e&&(e.parentNode.removeChild(e),document.body.style.opacity="")},setTimeout(window.rmo,3e3)}();`,
+          }}
+        />
         {/* Google Tag Manager - as high in head as possible */}
         <Script
           id="gtm-head"
@@ -72,6 +81,11 @@ export default function RootLayout({
           id="winpag-tracker"
           src="https://test-winpag.lovable.app/winpag-tracker.js"
           data-site-id="8786f8b8-f5e4-4881-857e-2100418b3091"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="stellar"
+          src="https://d3niuqph2rteir.cloudfront.net/client_js/stellar.js?apiKey=91d622a10f8a4f2dfcfe35679b966521:b3f390e37ec0bf6c3d7e5ffa80986678a2bbfb0cce9de60e44ad1b5f4b706ee4"
           strategy="afterInteractive"
         />
         {children}
