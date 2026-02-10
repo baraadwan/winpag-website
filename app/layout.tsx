@@ -68,6 +68,12 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          id="winpag-tracker"
+          src="https://test-winpag.lovable.app/winpag-tracker.js"
+          data-site-id="8786f8b8-f5e4-4881-857e-2100418b3091"
+          strategy="afterInteractive"
+        />
         {children}
       </body>
     </html>
