@@ -33,6 +33,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2 animate-fade-in-up-delay-1">
             <a href="https://app.winpag.com">
               <Button
+                id="main-button"
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90 h-12 px-8 text-base w-full sm:w-auto"
               >
